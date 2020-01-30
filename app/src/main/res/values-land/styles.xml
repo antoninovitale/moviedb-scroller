@@ -1,0 +1,24 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="CommonTextView.Header">
+        <item name="android:lines">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="CommonTextView.Body">
+        <item name="android:maxLines">4</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="CommonTextView.Overline">
+        <item name="android:lines">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+</resources>

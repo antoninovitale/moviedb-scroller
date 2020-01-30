@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/cd_list_img"
+            android:scaleType="fitCenter"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintDimensionRatio="H, 1:1"
+            card_view:layout_constraintEnd_toEndOf="@+id/guideline"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_placeholder" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            card_view:layout_constraintGuide_percent="0.35" />
+
+        <TextView
+            style="@style/CommonTextView.Header"
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            card_view:layout_constraintBottom_toTopOf="@+id/overview"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="@+id/guideline"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:text="Parasite" />
+
+        <TextView
+            style="@style/CommonTextView.Body"
+            android:id="@+id/overview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|center"
+            card_view:layout_constraintBottom_toTopOf="@+id/rating"
+            card_view:layout_constraintEnd_toEndOf="@+id/title"
+            card_view:layout_constraintStart_toStartOf="@+id/title"
+            card_view:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident." />
+
+        <TextView
+            style="@style/CommonTextView.Overline"
+            android:id="@+id/rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="start"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/release_date"
+            card_view:layout_constraintStart_toStartOf="@+id/title"
+            card_view:layout_constraintTop_toBottomOf="@+id/overview"
+            tools:text="90%" />
+
+        <TextView
+            style="@style/CommonTextView.Overline"
+            android:id="@+id/release_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            card_view:layout_constraintBottom_toBottomOf="@+id/rating"
+            card_view:layout_constraintEnd_toEndOf="@+id/title"
+            card_view:layout_constraintStart_toEndOf="@+id/rating"
+            card_view:layout_constraintTop_toBottomOf="@+id/overview"
+            tools:text="2019-05-30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
